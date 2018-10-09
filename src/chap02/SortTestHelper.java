@@ -39,6 +39,23 @@ public class SortTestHelper {
         return true;
     }
 
+    public static Integer[] generateNearlyOrderedArray(int n, int swapTimes){
+
+        Integer[] arr = new Integer[n];
+        for( int i = 0 ; i < n ; i ++ )
+            arr[i] = new Integer(i);
+
+        for( int i = 0 ; i < swapTimes ; i ++ ){
+            int a = (int)(Math.random() * n);
+            int b = (int)(Math.random() * n);
+            int t = arr[a];
+            arr[a] = arr[b];
+            arr[b] = t;
+        }
+
+        return arr;
+    }
+
     public static void testSort(String sortClassName, Comparable[] arr){
        try {
            Class sortClass = Class.forName(sortClassName);

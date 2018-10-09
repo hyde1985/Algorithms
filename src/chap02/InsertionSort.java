@@ -11,13 +11,20 @@ public class InsertionSort {
         int n = arr.length;
 
         for(int i = 1; i < n; i++) {
-            for( int j = i; j > 0; j--) {
+            /*for( int j = i; j > 0; j--) {
                 if(arr[j].compareTo(arr[j - 1]) < 0) {
                     swap(arr, j, j - 1);
                 } else {
                     break;
                 }
             }
+        }*/
+            Comparable e = arr[i];
+            int j = i;
+            for(; j > 0 && arr[j - 1].compareTo(e) > 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = e;
         }
     }
 
