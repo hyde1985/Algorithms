@@ -62,9 +62,13 @@ public class SelectionSort {
         SelectionSort.sort(d);
         for( int i = 0 ; i < d.length ; i ++ )
             System.out.println(d[i]);*/
-
+/*
         Integer[] a = SortTestHelper.generateRandomArray(500, 0, 8);
         SelectionSort.sort(a);
-        SortTestHelper.printArray(a);
+        SortTestHelper.printArray(a);*/
+
+        int N = 20000;
+        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
+        SortTestHelper.testSort("chap02.SelectionSort", arr);
     }
 }
