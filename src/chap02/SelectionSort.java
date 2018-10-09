@@ -26,7 +26,7 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        // 测试Integer
+/*        // 测试Integer
         Integer[] arr = {10,9,8,7,6,5,4,3,2,1};
         SelectionSort.sort(arr);
         for( int i = 0 ; i < arr.length ; i ++ ){
@@ -61,6 +61,10 @@ public class SelectionSort {
         d[3] = new Student("A",95);
         SelectionSort.sort(d);
         for( int i = 0 ; i < d.length ; i ++ )
-            System.out.println(d[i]);
+            System.out.println(d[i]);*/
+
+        Integer[] a = SortTestHelper.generateRandomArray(500, 0, 8);
+        SelectionSort.sort(a);
+        SortTestHelper.printArray(a);
     }
 }
